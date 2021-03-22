@@ -1,17 +1,29 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <router-link :to="{name: 'HomePage'}"></router-link>
+    <router-link :to="{name: 'Residents'}"></router-link>
+    <router-view></router-view>
+
+    <!--
+    <component :is="activePage"></component>
+    -->
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+//import HelloWorld from './components/HelloWorld.vue'
+//import HomePage from './components/home-page'
 
 export default {
   name: 'App',
+  data () {
+    return {
+      //activePage: 'HomePage'
+    }
+  },
+
   components: {
-    HelloWorld
+    //HomePage
   }
 }
 </script>
@@ -21,8 +33,30 @@ export default {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+  height: 100% !important;
 }
+
+.montserat-font {
+  font-family: 'Montserrat';
+
+}
+.font-avenir {
+  font-family: 'Avenir';
+}
+.avenir-font-light {
+  font-family: 'Avenir';
+  font-weight: lighter;
+}
+
+.blue-background-color {
+  background-color: #2d5b92;
+}
+.sidebar-background-color {
+  background-color: #1483b7;
+}
+.text-blue {
+  color: rgba(0, 61, 126, .85);
+}
+
 </style>
