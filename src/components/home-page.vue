@@ -1,5 +1,6 @@
 <template>
     <div class="container-fluid h-100">
+        <!--
         <div id="habs-header" class="">
             <b-row class="blue-background-color">
                 <b-col class="text-white text-center my-auto">
@@ -8,7 +9,14 @@
                 </b-col>
             </b-row>
         </div>
-        <b-row class="h-75">
+        -->
+        <b-row id="habs-header" class="blue-background-color h-15">
+            <b-col class="text-white text-center my-auto">
+                <h1>HARMFUL ALGAL BLOOMS</h1>
+                <h4><i>This site maintained by SCHABNET for the exploration and education of</i> <b>Harmful Algal Blooms(HABs).</b></h4>
+            </b-col>
+        </b-row>
+        <b-row class="h-70">
             <!--
             <div class="col-sm-4 col-md-3 sidebar sidebar-background-color" >
             -->
@@ -72,7 +80,9 @@
                     </li>
                 </ul>
             </b-col>
-            <b-col id="content" cols="8" class="text-black sidebar-background-color">
+            <b-col id="content" cols="8"
+                   class="text-black"
+                   :style="{'background-size': 'contain', 'background-image': `url(${require('@/assets/images/background-habs.jpg')})`}">
                 <b-row id="" class="h-75 content-section">
                     <b-col>
                         <h1>Content here</h1>
@@ -107,10 +117,11 @@
                 </b-row>
             </b-col>
         </b-row>
-        <b-row>
+        <b-row class="h-15">
             <b-col sm="3" class="blue-background-color"></b-col>
+
             <b-col>
-                <HABSFooter></HABSFooter>
+                <HABSFooter footer_class_prop="h-100 blue-background-color align-items-baseline"></HABSFooter>
             </b-col>
         </b-row>
         <!--
@@ -232,6 +243,12 @@
     }
     .user-button-col {
         bottom:0;
+    }
+    .h-15 {
+        height: 15% !important;
+    }
+    .h-70 {
+        height: 70% !important;
     }
     .content-section {
         height: 80% !important;
