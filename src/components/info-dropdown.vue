@@ -1,5 +1,5 @@
 <template>
-    <div :style="background_color" class="mt-4 mb-4" :class="item_class">
+    <div :style="background_color" class="mt-4 mb-4" :class="item_class_prop">
         <div
              v-on:click="item_clicked"
              :class="item_header_class_prop"
@@ -10,7 +10,7 @@
                 </slot>
             </h2>
         </div>
-        <div v-show=dropdown_opened class="text-white">
+        <div v-show=dropdown_opened class="" :class="item_dropdown_prop">
             <slot name="item-content">
                 Content for the Item goes here.
             </slot>
@@ -24,7 +24,7 @@
 
     export default {
         name: 'ItemDropdown',
-        props: ['background_color', 'header_text_justify', 'item_class_prop', 'item_header_class_prop'],
+        props: ['background_color', 'header_text_justify', 'item_class_prop', 'item_header_class_prop', 'item_dropdown_prop'],
         components: {
         },
         data () {

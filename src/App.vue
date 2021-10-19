@@ -50,13 +50,19 @@ export default {
 }
 
 .blue-background-color {
-  background-color: #2d5b92;
+  background-color: #074281;
 }
 .sidebar-background-color {
-  background-color: #1483b7;
+  background-color: #074281;
 }
 .text-blue {
   color: rgba(0, 61, 126, .85);
+}
+.category-item {
+  background-color: #1483b7;
+  opacity: 80%;
+  height: 200px;
+  margin-right: 15px;
 }
 
 </style>
